@@ -1,0 +1,12 @@
+.btn-primary {
+  background-color: #78b400;
+  border-color: #78b400;
+}
+.text-primary {
+  color: #78b400;
+}
+/* Custom toggle switch styles */
+.form-check-input[type="checkbox"]:checked + .form-check-label:before {
+  background-color: #78b400; /* Replace with your desired color */
+  border-color: #78b400; /* Replace with your desired color */
+}

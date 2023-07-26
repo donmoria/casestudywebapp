@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" />
+  <link rel="shortcut icon" href="/HSLogo.png">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./custom-bootstrap.css" />
+  <script src="main.js"></script>
+
+  <title>Prüfungs-Einsichts-Verwaltung</title>
+</head>
+
+<body class="bg-light p-4">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-6">
+        <div class="text-center">
+          <img src="HSLogo.png" alt="HSLogo" class="img-fluid logoindex" height="150px" width="150px" />
+          <h1 class="mt-3 text-black">Prüfungs-Einsichts-Verwaltung</h1>
+        </div>
+
+        <!-- login form -->
+
+        <form id="loginform">
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="s-mhuber@haw-landshut.de" />
+          </div>
+          <div class="mb-3">
+            <label for="matrikelnummer" class="form-label">Matrikelnummer</label>
+            <input type="text" class="form-control" id="matrikelnummer" placeholder="123456" />
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="********" />
+          </div>
+          <a type="submit" id="submit" class="btn btn-primary w-100 mb-3" href="./examlist.html">Login
+          </a>
+        </form>
+
+        <div class="d-flex justify-content-between">
+          <a href="https://sso.haw-landshut.de/pwreset/" class="text-decoration-none text-black">Passwort vergessen?</a>
+          <a href="https://www.haw-landshut.de/datenschutz.html"
+            class="text-decoration-none text-black">Datenschutzerklärung</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  <script src="main.js"></script>
+  <script src="login.js"></script>
+</body>
+
+</html>

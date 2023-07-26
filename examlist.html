@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prüfungsverwaltung - Prüfungsübersicht</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./custom-bootstrap.css" />
+  <link rel="shortcut icon" href="/HSLogo.png">
+  <script src="main.js"></script>
+
+
+
+  <link rel="stylesheet" href="styles.scss" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="main.js"></script>
+  <script src="examlist.js"></script>
+
+
+  <style>
+    /* custom css für toggle switch */
+    .form-check {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+
+</head>
+<div class="p-4">
+  <!-- logout button -->
+  <div>
+    <a class="btn btn-primary" href="./index.html" role="button">Logout</a>
+  </div>
+  <div class="text-center">
+    <img src="HSLogo.png" alt="HSLogo" class="logoindex" width="150px" height="150px" />
+  </div>
+<br>
+  <div>
+    <h1 class="text-center">Prüfungsverwaltung</h1>
+  </div>
+  <div>
+    <h2 class="text-center">Prüfungsübersicht</h2>
+  </div>
+  <div>
+    <h3 class="text-center">Prüfungen</h3>
+  </div>
+  <br>
+
+
+  <!-- auflistung exams mit toggle switch -->
+  <div class="text-center border">
+    <div class="form-check form-switch d-flex align-items-center">
+      <input class="form-check-input" type="checkbox" id="toggle1" />
+      <label class="form-check-label" for="toggle1"><b>Grundlagen BWL</b>
+        <br>
+        Prof. Dr. Mühlfriedel
+        <br>
+        Einsichtsdatum: 13.09.2023
+        <br>
+        Uhrzeit: 14:30
+      </label>
+    </div>
+  </div>
+  <br>
+  <div class="text-center border ">
+    <div class="form-check form-switch d-flex align-items-center">
+      <input class="form-check-input" type="checkbox" id="toggle2" />
+      <label class="form-check-label" for="toggle2"><b>Grundlagen VWL</b>
+        <br>
+        <label class="">Prof. Dr. Jäger</label>
+        <br>
+        Einsichtssdatum: 13.09.2023
+        <br>
+        Uhrzeit: 14:30
+      </label>
+    </div>
+  </div>
+  <br>
+  <div class="text-center border ">
+    <div class="form-check form-switch text-center">
+      <input class="form-check-input" type="checkbox" id="toggle3" />
+      <label class="form-check-label text-center" for="toggle3" ><b>Arbeitsrecht</b>
+        <br>
+        Prof. Dr. Strunz
+        <br>
+        Einsichtsdatum: 14.09.2023
+        <br>
+        Uhrzeit: 14:50
+      </label>
+    </div>
+  </div>
+  <br>
+  <div class="text-center border">
+    <div class="form-check form-switch d-flex align-items-center">
+      <input class="form-check-input" type="checkbox" id="toggle4" />
+      <label class="form-check-label" for="toggle4"><b>Wirtschaftsmathematik</b>
+        <br>
+        Prof. Dr. Martens
+        <br>
+        Einsichtssdatum: 14.09.2023
+        <br>
+        Uhrzeit: 15:10
+      </label>
+    </div>
+  </div>
+  <br>
+  <div class="text-center border">
+    <div class="form-check form-switch d-flex align-items-center">
+      <input class="form-check-input" type="checkbox" id="toggle5" />
+      <label class="form-check-label" for="toggle5"><b>ITMC</b>
+        <br>
+        Prof. Dr. Greipl
+        <br>
+        Einsichtsdatum: 13.09.2023
+        <br>
+        Uhrzeit: 15:30
+      </label>
+    </div>
+  </div>
+</div>
+</div>
+<div class="d-flex justify-content-center d-flex align-items-center">
+  <button type="button" class="btn btn-primary btn-confirm">
+    Auswahl bestätigen
+  </button>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="noToggleModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="noToggleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="noToggleModalLabel">Bitte wählen Sie mindestens eine Prüfung aus</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Sie müssen mindestens eine Prüfung auswählen, um fortzufahren.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="main.js"></script>
+
+
+</body>
+
+</html>
