@@ -1,16 +1,17 @@
 $(document).ready(function () {
-  // Function to get selected exam labels from URL parameters
+  // holt exam label von url
   const urlParams = new URLSearchParams(window.location.search);
   const selectedLabels = urlParams.get("selectedLabels");
 
-  // Array to hold selected exam labels
+  // array für exam label
   let labelsArray = selectedLabels ? selectedLabels.split(",") : [];
 
-  // Function to populate the selected exams list dynamically
+  // funkition für liste der ausgewählten prüfungen
   const selectedExamsList = $(".selectedExamsList");
 
   function updateSelectedExamsList() {
     selectedExamsList.empty();
+    labelsArray = labelsArray.filter((label, index, self) => self.indexOf(label) === index); // entfernt doppelte einträge
     labelsArray.forEach((label) => {
       const examBox = $("<div>").addClass("exam-box");
       const listItem = $("<li>").text(label);
@@ -21,17 +22,18 @@ $(document).ready(function () {
     });
   }
 
+  // funktion aufrufen
   updateSelectedExamsList();
 
-  // Von Einsicht abmelden
-  selectedExamsList.one('click', '.unregister', function (event) {
-    event.preventDefault(); // verhindert standardverhalten von button
+  // funktion um sich von prüfung abzumelden
+  selectedExamsList.on('click', '.unregister', function (event) {
+    event.preventDefault(); // vermeidet standardeingabe von button
 
     const listItem = $(this).closest("li");
     const exam = listItem.text().trim(); // holt exam label von liste
     const confirmed = window.confirm('Möchten Sie sich wirklich von der Prüfung "' + exam + '" abmelden?');
     if (confirmed) {
-      // entfernt exam label aus array
+      // entfernt ausgeählte prüfung aus array
       labelsArray = labelsArray.filter((label) => label !== exam);
       // speichert array in localStorage
       localStorage.setItem('selectedExams', JSON.stringify(labelsArray));
@@ -40,4 +42,3 @@ $(document).ready(function () {
     }
   });
 });
-
